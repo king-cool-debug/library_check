@@ -9,7 +9,7 @@ COPY requirements.txt /app/requirements.txt
 RUN pip install -r /app/requirements.txt
 
 # Copy your Python script to the container
-COPY your_script.py /app/your_script.py
+COPY main.py /app/main.py
 
 # Set up the cron job
 RUN echo "0 16 * * * /usr/local/bin/python3 /app/your_script.py" > /etc/cron.d/python-cron
